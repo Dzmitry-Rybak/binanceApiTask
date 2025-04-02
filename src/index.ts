@@ -23,3 +23,5 @@ app.use((err: any, req: Request, res: Response, next: NextFunction): void => {
 app.listen(PORT, () => {
     console.log(`Server listen on ${PORT}`)
 })
+
+export default app

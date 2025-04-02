@@ -22,7 +22,12 @@ export const aggTrades = async (
 
         const data = await response.json()
 
-        res.status(200).json({ data })
+        const changesPrice =
+            parseFloat(data[0].p) - parseFloat(data[data.length - 1].p)
+
+        const changes = changesPrice > 0 ? 'price increase' : 'price decrease'
+
+        res.status(200).json({ changes, cryptocurrencyData: data })
     } catch (error) {
         console.log('error', error)
         next(error)

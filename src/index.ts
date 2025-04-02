@@ -4,7 +4,7 @@ import { PORT } from './config/config'
 
 const app = express()
 
-app.get('/', binanceRouter)
+app.use('/depth', binanceRouter)
 
 app.use((err: any, req: Request, res: Response, next: NextFunction): void => {
     let statusCode = 500

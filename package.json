@@ -4,7 +4,7 @@
     "main": "index.js",
     "scripts": {
         "dev": "nodemon --files src/index.ts",
-        "test": "jest --watchAll"
+        "test": "jest"
     },
     "author": "Dzmitry Rybak",
     "license": "ISC",
@@ -13,6 +13,7 @@
         "@babel/core": "^7.26.10",
         "@babel/preset-env": "^7.26.9",
         "@types/express": "^5.0.1",
+        "@types/jest": "^29.5.14",
         "@types/node": "^22.13.17",
         "babel-jest": "^29.7.0",
         "ts-node": "^10.9.2",

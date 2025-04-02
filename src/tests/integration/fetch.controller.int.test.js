@@ -1,12 +1,15 @@
-import request from 'supertest'
-import app from "../..";
-import btc from '../mock-data/btc.json'
+const request = require('supertest')
+const app = require('../../index')
 
 const endpointUrl = '/depth'
 
 describe(endpointUrl, () => {
-    if("GET", async () => {
-        const response = await request(app).get(endpointUrl);
+    it('GET', async () => {
+        const response = await request(app).get(endpointUrl)
         expect(response.statusCode).toBe(200)
+    })
+
+    it('should return 404 error', async () => {
+        const response = await request(app).get(endpointUrl)
     })
 })
